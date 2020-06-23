@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.segib"
+    },
+    "jhipsterVersion": "6.9.1",
+    "applicationType": "microservice",
+    "baseName": "faceRecog",
+    "packageName": "com.segib",
+    "packageFolder": "com/segib",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZjVlMDNkY2Y3YjNlMzRlODZjNjY4Y2RkYjZlZWJmNDRmN2EyNzdlZTJiZmQxMTNkZDk4NDI1MzdhMTYxZDg0MDNmYjRlMGU2OWM2ZmQ5ZmFiN2ViM2UxYzdlOWNkNTllYTcxMjI1YWNiYjkwYjNmNWNlZTk0MTViNDAzOGZlZWQ=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1592951332621,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-kafka",
+        "version": "0.3.0"
+      }
+    ],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
