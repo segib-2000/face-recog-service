@@ -39,6 +39,6 @@
     "skipClient": true,
     "skipUserManagement": true,
     "herokuAppName": "face-recog-service",
-    "herokuDeployType": "git"
+    "herokuDeployType": "local"
   }
 }
