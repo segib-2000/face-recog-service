@@ -37,6 +37,8 @@
     "clientPackageManager": "npm",
     "blueprints": [],
     "skipClient": true,
-    "skipUserManagement": true
+    "skipUserManagement": true,
+    "herokuAppName": "face-recog-service",
+    "herokuDeployType": "git"
   }
 }
