@@ -48,7 +48,7 @@ script:
     ./gradlew jacocoTestReport sonarqube --no-daemon -Dsonar.organization=$SONAR_ORGANIZATION -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN;
     fi
   - ./gradlew bootJar -Pprod -x test
-  - ./gradlew deployHeroku
+  - ./gradlew stage
 notifications:
   webhooks:
     on_success: change # options: [always|never|change] default: always
