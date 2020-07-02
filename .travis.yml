@@ -17,6 +17,8 @@ env:
     - SPRING_JPA_SHOW_SQL=false
     - JHI_DISABLE_WEBPACK_LOGS=true
     - NG_CLI_ANALYTICS="false"
+    - SONAR_ORGANIZATION=$SONAR_ORGANIZATION
+    - SONAR_TOKEN=$SONAR_TOKEN
 before_install:
   - |
     if [[ $JHI_JDK = '8' ]]; then
@@ -42,7 +44,9 @@ script:
   - chmod +x gradlew
   - ./gradlew checkstyleNohttp
   - ./gradlew clean test integrationTest
-  - if [ $TRAVIS_PULL_REQUEST == "false" ]; then ./gradlew sonarqube --no-daemon -Dsonar.organization=segib-2000 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN; fi
+  - if [ $TRAVIS_PULL_REQUEST == "false" ]; then
+    ./gradlew jacocoTestReport sonarqube --no-daemon -Dsonar.organization=$SONAR_ORGANIZATION -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN;
+    fi
   - ./gradlew bootJar -Pprod -x test
   - ./gradlew deployHeroku
 notifications:
